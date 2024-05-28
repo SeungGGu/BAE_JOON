@@ -18,6 +18,8 @@ public class bae11022 {
             sum[i] = a[i] + b[i];
         }
 
+        sc.close();
+
         for(int i=0; i<line; i++){
             System.out.println("Case #" + (i+1) +": " + a[i] + " + " + b[i] + " = " + sum[i]);
         }
