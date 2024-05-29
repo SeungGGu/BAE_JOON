@@ -2,7 +2,7 @@ package 반복문;
 
 import java.util.Scanner;
 
-public class bae11022 {
+public class Bae11022 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int line = 0;
