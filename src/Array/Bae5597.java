@@ -13,8 +13,8 @@ public class Bae5597 {
             arr[num - 1] = 1;
         }
 
-        for (int i = 1; i < 30; i++) {
-            if (arr[i] != 1) {
+        for (int i = 0; i < 30; i++) {
+            if (arr[i] == 0) {
                 System.out.println(i+1);
             }
         }
