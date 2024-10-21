@@ -11,5 +11,18 @@ public class sw2071 {
         int T = Integer.parseInt(bufferedReader.readLine());
 
 
+        for (int i = 1; i <= T; i++) {
+            int sum = 0;
+
+            String[] input = bufferedReader.readLine().split(" ");
+
+            for (int j=0; j<10; j++){
+                sum += Integer.parseInt(input[j]);
+            }
+
+            int avg = Math.round(sum / 10.0f);
+
+            System.out.println("#" + i + " " + avg);
+        }
     }
 }
