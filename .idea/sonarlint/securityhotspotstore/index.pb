@@ -13,3 +13,5 @@ K
 src/반복문/Bae11022.java,5\f\5f4d51303cdf702d94f8a0f4d1e7cab94ea64a5a
 J
 src/반복문/Bae2438.java,2\7\2709533868fcb369e0a1ccfece1fee397a2d4140
+K
+src/반복문/Bae10926.java,6\5\6537b3cf6176470791df1c25be9386ed6dd941a4
