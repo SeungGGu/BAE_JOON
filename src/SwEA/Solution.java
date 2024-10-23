@@ -1,4 +1,4 @@
-package SwEA.D1;
+package SwEA;
 
 import java.util.Scanner;
 
@@ -9,7 +9,6 @@ public class Solution {
         int T = sc.nextInt();
 
         for (int i=1; i<=T; i++){
-
 
             System.out.println("#" + i + " " );
         }
