@@ -23,7 +23,7 @@ public class sw2005 {
                     }
                 }
             }
-            System.out.println("#" + T);
+            System.out.println("#" + i);
             for (int x = 0; x < N; x++) {
                 for (int y = 0; y <= x; y++)
                     System.out.print(arr[x][y] + " ");

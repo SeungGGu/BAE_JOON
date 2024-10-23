@@ -10,7 +10,7 @@ public class Solution {
 
         for (int i=1; i<=T; i++){
 
-            System.out.println("#" + i + " " );
+            System.out.printf("#%d \n", i);
         }
     }
 }
