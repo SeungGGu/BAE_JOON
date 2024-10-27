@@ -32,7 +32,7 @@ public class sw2001 {
                         // sx = 0
                         // sx = 0 1
                         for (int sy = y; sy < y + M; sy++) {
-                            System.out.print(" sx = " + sx + " sy = " + sy);
+//                            System.out.print(" sx = " + sx + " sy = " + sy);
                             //sy = 0
                             //sy = 0 1
                             cnt += arr[sx][sy];
