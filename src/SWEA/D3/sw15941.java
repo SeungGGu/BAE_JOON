@@ -1,8 +1,8 @@
-package SWEA;
+package SWEA.D3;
 
 import java.util.Scanner;
 
-public class Solution {
+public class sw15941 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -11,7 +11,9 @@ public class Solution {
         for (int i=1; i<=T; i++){
             int n = sc.nextInt();
 
-            System.out.printf("#%d \n", i);
+            int result = n*n;
+
+            System.out.printf("#%d %d\n", i, result);
         }
     }
 }
