@@ -15,12 +15,11 @@ public class sw7728 {
             String strN = String.valueOf(n);
 
             while (!strN.isEmpty()){
-
+                strN = strN.replaceAll(String.valueOf(strN.charAt(0)),"");
                 cnt++;
             }
 
-
-            System.out.printf("#%d \n", i);
+            System.out.printf("#%d %d\n", i, cnt);
         }
     }
 }

@@ -7,31 +7,21 @@ public class sw22574 {
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
 
-        StringBuilder sb = new StringBuilder();
-
-        for (int t = 0; t < T; t++) {
-            int n = sc.nextInt();
-            int p = sc.nextInt();
-
-            int maxPossibleFloor = n * (n + 1) / 2;
-
-            boolean[] dp = new boolean[maxPossibleFloor +1];
-            dp[0] = true;
-
-            int maxFloor = 0;
+        for (int t = 1; t <= T; t++) {
+            int n = sc.nextInt();  // 선택 횟수 N
+            int p = sc.nextInt();  // 폭탄이 설치된 층 P
+            int floor = 0;
 
             for (int i = 1; i <= n; i++) {
-                for (int j = maxPossibleFloor; j >= 0; j--) {
-                    if (dp[j]) {
-                        if (j + i != p && j + i <= maxPossibleFloor) {
-                            dp[j + i] = true;
-                            maxFloor = Math.max(maxFloor, j + i);
-                        }
-                    }
+                int temp = floor + i;
+                if (temp != p){
+                    floor += i;
+                }else{
+                    floor += i-1;
                 }
             }
-            sb.append(maxFloor).append("\n");
+            System.out.println(floor);
         }
-        System.out.print(sb.toString());
+        sc.close();
     }
 }
