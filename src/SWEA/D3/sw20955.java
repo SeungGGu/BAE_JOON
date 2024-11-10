@@ -32,9 +32,9 @@ public class sw20955 {
             foundSolution = true;
         }
 
-        if (s.length() == e.length() && (s.compareTo(e) != 0)){
-            return;
-        }
+//        if (s.length() == e.length() && (s.compareTo(e) != 0)){
+//            return;
+//        }
 
         if (i == 0){
             s.append("Y");
