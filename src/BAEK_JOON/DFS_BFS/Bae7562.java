@@ -1,33 +1,55 @@
 package BAEK_JOON.DFS_BFS;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
 
 public class Bae7562 {
-    static int t, l;
-    static int[][] map;
-    static int count = 0;
+    static int[] dx = {-2, -1, 1, 2, 2, 1, -1, -2};
+    static int[] dy = {-1, -2, -2, -1, 1, 2, 2, 1};
 
-    public static void bfs(int[][] map, int startX, int startY, int endX, int endY){
+    public static int bfs(int l, int startX, int startY, int endX, int endY) {
+        if (startX == endX && startY == endY) {
+            return 0;
+        }
 
+        boolean[][] visited = new boolean[l][l];
+        Queue<int[]> queue = new LinkedList<>();
+        queue.add(new int[]{startX, startY, 0});
+        visited[startX][startY] = true;
+
+        while (!queue.isEmpty()) {
+            int[] curr = queue.poll();
+            int x = curr[0], y = curr[1], moves = curr[2];
+
+            for (int i = 0; i < 8; i++) {
+                int nx = x + dx[i];
+                int ny = y + dy[i];
+
+                if (nx >= 0 && ny >= 0 && nx < l && ny < l && !visited[nx][ny]) {
+                    if (nx == endX && ny == endY) {
+                        return moves + 1;
+                    }
+                    queue.add(new int[]{nx, ny, moves + 1});
+                    visited[nx][ny] = true;
+                }
+            }
+        }
+        return -1;
     }
 
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        t = Integer.parseInt(br.readLine());
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
 
-        for (int test_case = 0; test_case < t; test_case++) {
-            l = Integer.parseInt(br.readLine());
-            map = new int[l][l];
-            StringTokenizer st = new StringTokenizer(br.readLine());
-            int startX = Integer.parseInt(st.nextToken());
-            int startY = Integer.parseInt(st.nextToken());
-            st = new StringTokenizer(br.readLine());
-            int endX = Integer.parseInt(st.nextToken());
-            int endY = Integer.parseInt(st.nextToken());
-            bfs(map ,startX, startY, endX, endY);
+        for (int tc = 0; tc < t; tc++) {
+            int l = sc.nextInt();
+            int startX = sc.nextInt(), startY = sc.nextInt();
+            int endX = sc.nextInt(), endY = sc.nextInt();
+
+            System.out.println(bfs(l, startX, startY, endX, endY));
         }
     }
 }
+
+
